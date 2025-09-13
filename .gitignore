@@ -1,0 +1,21 @@
+# MkDocs build output
+/site/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Batch scripts
+deploy_docs.bat
+serve_docs.bat
