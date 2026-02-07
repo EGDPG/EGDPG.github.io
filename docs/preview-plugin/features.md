@@ -2,16 +2,6 @@
 
 The Modular Character Preview Component provides a streamlined solution for previewing modular characters with equipped gear in real time. It is designed to be integrated quickly into existing UI systems with minimal setup.
 
-## Quick Integration
-
-- Requires only two main steps:
-  1. Add the preview component to the Player Controller.
-  2. Add the provided preview widget to any UI container (e.g., inventory or equipment screens).
-- Minimal character setup required:
-  - The main skeletal mesh must be assigned a tag for identification.
-  - Optional: Add ignore tags to meshes that should never be shown in the preview (e.g., Character meshes used in live retargeting setups such as GASP UEFN Mesh).
-- No additional initialization logic or custom character modifications needed.
-
 ## Real-Time Modular Preview
 
 - Renders modular character assemblies, including armor, clothing, accessories, and weapons.
@@ -35,11 +25,10 @@ The Modular Character Preview Component provides a streamlined solution for prev
 - Fully supports modular skeletal mesh setups for armor, clothing, and accessories.
 - Designed for use with characters assembled from multiple skeletal mesh components.
 
-## Groom Support (Planned)
+## Groom Support
 
-- Partial support for groom components such as beards and hairstyles. (logic diconnected currently)
-- Known issues exist with certain MetaHuman grooms not rendering consistently in the preview.
-- Full groom compatibility is planned for a future update.
+- Supports Groom Components (hair, beards) through the `GetMeshes` interface output.
+- MetaHuman grooms may still require additional tuning depending on bindings and LOD settings.
 
 ## Performance-Conscious Design
 
@@ -48,8 +37,8 @@ The Modular Character Preview Component provides a streamlined solution for prev
 
 ## Multiplayer Compatibility
 
-- Replication-aware design ensures consistent previews in networked environments.
-- Safe to use in multiplayer equipment and loadout systems.
+- Client-local preview rendering, safe for multiplayer equipment and loadout systems.
+- No replication required for preview visuals.
 
 ## Customization Ready
 

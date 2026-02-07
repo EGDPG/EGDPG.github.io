@@ -25,7 +25,7 @@ This release introduces the Modular Character Preview Component, a lightweight a
 
 <b>Modular Component Design</b><br/>
 • Blueprint-only implementation with a clean and extendable logic structure<br/>
-• Drop-in component that requires no structural changes to the character class beyond tag assignments
+• Drop-in component that requires no structural changes to the character class
 
 <br/><br/>
 
@@ -62,7 +62,7 @@ This release introduces the Modular Character Preview Component, a lightweight a
 <br/><br/>
 
 <b>Compatibility</b><br/>
-• Verified on Unreal Engine 5.4, 5.5, and 5.6<br/>
+• Verified on Unreal Engine 5.5, 5.6, and 5.7<br/>
 • Supports both single-player and multiplayer (replicated) projects
 
 <br/><br/>
