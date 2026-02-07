@@ -15,8 +15,11 @@
         <link rel="next" href="../integrations/">
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -24,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -50,7 +53,6 @@
     
       
 
-    
     
     
   </head>
@@ -233,9 +235,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -268,9 +275,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Modular Character Preview
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -279,7 +291,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Modular Character Preview
+            
+  
+    Modular Character Preview
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -295,9 +311,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
     
   </span>
+  
   
 
       </a>
@@ -318,9 +339,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Features
+  
+
     
   </span>
+  
   
 
       </a>
@@ -350,9 +376,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Installation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -374,9 +405,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Integrations
+  
+
     
   </span>
+  
   
 
       </a>
@@ -397,9 +433,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Patch Notes
+  
+
     
   </span>
+  
   
 
       </a>
@@ -438,9 +479,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Modular WIP Plugin
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -449,7 +495,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Modular WIP Plugin
+            
+  
+    Modular WIP Plugin
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -465,9 +515,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Coming Soon
+  
+
     
   </span>
+  
   
 
       </a>
@@ -506,9 +561,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Shared Resources
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -517,7 +577,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Shared Resources
+            
+  
+    Shared Resources
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -533,9 +597,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     FAQ
+  
+
     
   </span>
+  
   
 
       </a>
@@ -556,9 +625,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Support
+  
+
     
   </span>
+  
   
 
       </a>
@@ -602,6 +676,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -610,12 +685,19 @@
 
 <h1 id="installation">Installation</h1>
 <ol>
-<li>Download from Fab. </li>
-<li>Ensure the plugin is enabled in the plugins section of the project.</li>
-<li>Add the component to the player controller.</li>
-<li>Add the included widget to any widget you want it to be displayed in. For example an inventory hud. (See integration section)</li>
-<li>Thats it.</li>
+<li>Enable the plugin in your project.
+<img alt="Enable plugin" src="../../images/step-01-enable-plugin.png" /></li>
+<li>Add <code>BPI_ModularCharacterPreview</code> to your character and implement <code>GetMeshes</code>.
+<img alt="Add BPI and implement GetMeshes" src="../../images/step-02-add-bpi%20and%20GetMeshes.png" /></li>
+<li>Add the <code>BPC_ModularCharacterPreview</code> component to your Player Controller.
+<img alt="Add component to Player Controller" src="../../images/step-04-add-component-to-player-controller.png" /></li>
+<li>Add <code>W_ModularCharacterPreview</code> to your UI widget (inventory, equipment, etc.).
+<img alt="Add widget" src="../../images/step-05-add-widget.png" /></li>
+<li>In the widget, disconnect the static preview texture binding so the runtime RenderTarget can be assigned.
+<img alt="Disconnect static binding" src="../../images/step-06-add-widget-disconnect-this-connection.png" /></li>
 </ol>
+<p>Notes:
+The <code>GetMeshes</code> output should return Main Mesh, Follower Meshes array, Face Mesh, and Groom Components array.</p>
 
 
 
@@ -659,10 +741,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
